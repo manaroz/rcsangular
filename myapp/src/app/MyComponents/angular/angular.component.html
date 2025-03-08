@@ -1,0 +1,17 @@
+<div class="card">
+  <div class="card-header">
+    Angular
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Czym jest i dlaczego wybrać Angular?</h5>
+    <p class="card-text">Angular to otwarty framework i platforma do tworzenia SPA, napisany w języku TypeScript i wspierany oraz rozwijany przez Google. Jego cechą charakterystyczną jest fakt, iż umożliwia automatyczną synchronizacją na linii model-widok. Dodatkowo, bardzo dobrze współpracuje on z innymi frameworkami, co umożliwia tworzenie hybrydowych aplikacji mobilnych. Oferuje wbudowane narzędzia, takie jak m.in. routing, formularze, dependency injection, itp.</p>
+  </div>
+</div>
+
+<div *ngIf="isAngular" class="mt-3">
+  <p>Angular jest często wykorzystywany w dużych aplikacjach korporacyjnych.</p>
+</div>
+
+<ul class="list-group mt-3">
+  <li class="list-group-item" *ngFor="let feature of angularFeatures">{{ feature }}</li>
+</ul>

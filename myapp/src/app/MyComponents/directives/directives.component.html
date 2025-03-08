@@ -1,0 +1,38 @@
+<div class="card border-secondary">
+    <div class="card-body">
+        <h4 class="card-title">{{info}}</h4>
+
+        <ul>
+            @for(c of countries;track $index){
+                <li>
+                    <a href="#" (click)="navigateToHome($event)">{{c.name}}</a>:{{c.capital}}, {{c.area}} km<sup>2</sup>
+                </li>
+            }
+        </ul>
+    </div>
+</div>
+
+<hr>
+
+<div class="card border-secondary">
+    <div class="card-body">
+        <h4 class="card-title">Conditional statement</h4>
+
+        <ul>
+            @for(c of countries;track $index){
+                <li>
+                    @if(c.area>600000){
+                        <div class="large">
+                            <a href="#" (click)="navigateToHome($event)">{{c.name}}</a>:{{c.capital}}, {{c.area}} km<sup>2</sup>
+                        </div>
+                    }
+                    @else{
+                        <div class="small">
+                            <a href="#" (click)="navigateToHome($event)">{{c.name}}</a>:{{c.capital}}, {{c.area}} km<sup>2</sup>
+                        </div> 
+                    }               
+                </li>
+            }
+        </ul>
+    </div>
+</div>
